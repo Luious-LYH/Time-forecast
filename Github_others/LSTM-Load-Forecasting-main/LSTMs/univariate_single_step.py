@@ -18,8 +18,9 @@ from args import us_args_parser
 from data_process import setup_seed
 
 setup_seed(20)
-path = os.path.abspath(os.path.dirname(os.getcwd()))
-LSTM_PATH = path + '/models/univariate_single_step.pkl'
+path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LSTM_PATH = os.path.join(path, 'models', 'univariate_single_step.pkl')
+LSTM_PATH = LSTM_PATH.replace("\\", "/") #torch.save()不能保存windows路径，需要替换
 # print(LSTM_PATH)
 
 

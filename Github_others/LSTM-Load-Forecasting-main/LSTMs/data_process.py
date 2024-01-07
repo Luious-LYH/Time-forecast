@@ -30,7 +30,8 @@ def load_data():
     """
     path = os.path.dirname(os.path.realpath(__file__)) + '/data/data.csv'
     df = pd.read_csv(path, encoding='gbk')
-    df.fillna((df.mean()), inplace=True)
+    num_cols = ['load', 'year', 'month', 'hour', 'day', 'lowtmep', 'hightemp'] #data无法取平均值
+    df[num_cols].fillna(df[num_cols].mean(), inplace=True)
     return df
 
 

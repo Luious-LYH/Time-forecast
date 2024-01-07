@@ -94,7 +94,13 @@ def train(args, Dtr, Val, path):
         model.train()
 
     state = {'models': best_model.state_dict()}
-    torch.save(state, path)
+    try:
+        #path = path.replace("\\", "/")
+        torch.save(state, path)
+    except Exception as e:
+        print("Error: unable to save the model")
+        print(e)
+
 
 # 测试模型并进行预测
 def test(args, Dte, path, m, n):
@@ -131,6 +137,8 @@ def test(args, Dte, path, m, n):
     plt.plot(x_smooth, y_smooth, c='red', marker='o', ms=1, alpha=0.75, label='pred')
     plt.grid(axis='y')
     plt.legend()
+    #os.environ['KMP_DUPLICATE_LIB_OK']='True'
+    plt.savefig(r"E:\Github\Lstm-load-forecast\Github_others\LSTM-Load-Forecasting-main\results\LSTM-Load-Forecasting.png.png")
     plt.show()
     input("Press Enter to continue...")
     
