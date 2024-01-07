@@ -55,11 +55,11 @@ def ms_args_parser():
 
 def us_args_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=100, help='input dimension')
+    parser.add_argument('--epochs', type=int, default=50, help='input dimension')
     parser.add_argument('--input_size', type=int, default=1, help='input dimension') #单变量特征，所以是1
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=1, help='output dimension')
-    parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
+    parser.add_argument('--hidden_size', type=int, default=32, help='hidden size')
     parser.add_argument('--num_layers', type=int, default=2, help='num layers')
     parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
     parser.add_argument('--batch_size', type=int, default=30, help='batch size')

@@ -15,7 +15,7 @@ import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 class LSTM(nn.Module):
-
+    
     def __init__(self, input_size, hidden_size, num_layers, output_size, batch_size):
         super().__init__()
         self.input_size = input_size
@@ -33,7 +33,7 @@ class LSTM(nn.Module):
         c_0 = torch.randn(self.num_directions * self.num_layers, batch_size, self.hidden_size).to(device)
         output, _ = self.lstm(input_seq, (h_0, c_0))
         pred = self.linear(output)
-        pred = pred[:, -1, :]
+        pred = pred[:, -1, :] # 对于每一个批次，我们选择最后一个时间步的所有输出特征,张量维度：(batch_size, sequence_length, output_size)
         return pred
 
 

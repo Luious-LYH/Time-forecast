@@ -5,7 +5,7 @@ curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 
-from args import mo_args_parser
+from code.args import mo_args_parser
 from model_train import train, load_data
 from model_test import test
 

@@ -1,6 +1,6 @@
 import os
 import sys
-from args import ms_args_parser
+from code.args import ms_args_parser
 from util import train, test, load_data
 
 curPath = os.path.abspath(os.path.dirname(__file__))

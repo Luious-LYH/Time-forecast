@@ -36,8 +36,7 @@ def load_data(args, flag):
             Dtr, Val, Dte, m, n = nn_seq_ms(seq_len=(args.seq_len), B=(args.batch_size))
         else:
             Dtr, Val, Dte, m, n = nn_seq_mm(seq_len=(args.seq_len), B=(args.batch_size), num=(args.output_size))
-    return (
-     Dtr, Val, Dte, m, n)
+    return (Dtr, Val, Dte, m, n)
 
 # 计算验证集的损失值
 def get_val_loss(args, model, Val):
@@ -100,7 +99,6 @@ def train(args, Dtr, Val, path):
     except Exception as e:
         print("Error: unable to save the model")
         print(e)
-
 
 # 测试模型并进行预测
 def test(args, Dte, path, m, n):
