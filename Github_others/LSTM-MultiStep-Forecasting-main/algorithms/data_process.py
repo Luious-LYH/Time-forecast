@@ -31,7 +31,8 @@ def load_data(file_name):
     """
     path = os.path.dirname(os.path.realpath(__file__)) + '/data/' + file_name
     df = pd.read_csv(path, encoding='gbk')
-    df.fillna((df.mean()), inplace=True)
+    num_cols = df.columns[1:]  # 获取除第0列外的每一列名称(第0列的时间类型无法求均值)
+    df[num_cols].fillna(df[num_cols].mean(), inplace=True) #填补缺失值
     return df
 
 
