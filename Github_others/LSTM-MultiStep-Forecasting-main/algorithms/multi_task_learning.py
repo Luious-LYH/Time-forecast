@@ -16,7 +16,7 @@ rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
 
 from data_process import nn_seq_mtl
-from code.args import multi_task_args_parser
+from args import multi_task_args_parser
 from model_train import mtl_train, load_data
 from model_test import mtl_test
 

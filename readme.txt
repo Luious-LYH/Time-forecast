@@ -1,4 +1,1 @@
-Hello !
-2222
-3333
-成功添加到Github
+复现都整合在了code文件夹里面的jupyter文件2里了
