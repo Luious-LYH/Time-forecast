@@ -26,6 +26,7 @@ LSTM_PATH = LSTM_PATH.replace("\\", "/") #torch.save()不能保存windows路径�
 
 if __name__ == '__main__':
     args = us_args_parser()
+    args.epochs=75
     flag = 'us'
     Dtr, Val, Dte, m, n = load_data(args, flag)  # 表示使用单变量单步长的数据
     train(args, Dtr, Val, LSTM_PATH)
