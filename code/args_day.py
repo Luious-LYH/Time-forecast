@@ -35,7 +35,7 @@ def us_args_parser():#单变量单步预测
 def ms_args_parser(): #多变量单步预测(input_size=7)
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=75, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=11, help='input dimension')#因为是多变量，所以是7
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')#因为是多变量，所以是7
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=1, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -55,7 +55,7 @@ def mm_args_parser(): #多变量多步预测(ouput_size=4)
     parser = argparse.ArgumentParser()  
     # add_argument() 方法为参数解析器添加各种命令行参数
     parser.add_argument('--epochs', type=int, default=50, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=11, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=4, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -75,7 +75,7 @@ def mm_args_parser(): #多变量多步预测(ouput_size=4)
 def sss_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=75, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=11, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=1, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -96,7 +96,7 @@ def sss_args_parser():
 def mo_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=50, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=11, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=4, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -116,7 +116,7 @@ def mo_args_parser():
 def mmss_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=50, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=12, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=1, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -137,7 +137,7 @@ def mmss_args_parser():
 def mms_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=50, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=12, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=1, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -158,7 +158,7 @@ def mms_args_parser():
 def seq2seq_args_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=50, help='input dimension')
-    parser.add_argument('--input_size', type=int, default=12, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=12, help='output dimension')
     parser.add_argument('--hidden_size', type=int, default=64, help='hidden size')
@@ -202,8 +202,8 @@ def cl_mm_args_parser(): #多变量多步预测(ouput_size=4)
     parser = argparse.ArgumentParser()  
     # add_argument() 方法为参数解析器添加各种命令行参数
     parser.add_argument('--epochs', type=int, default=50, help='epochs')
-    parser.add_argument('--input_size', type=int, default=12, help='input dimension')
-    parser.add_argument('--in_channels', type=int, default=7, help='input channels')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
+    parser.add_argument('--in_channels', type=int, default=15, help='input channels')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=4, help='output dimension')
     parser.add_argument('--out_channels', type=int, default=32, help='output channels')
@@ -226,7 +226,7 @@ def trans_args_parser():
     parser = argparse.ArgumentParser()  
     # add_argument() 方法为参数解析器添加各种命令行参数
     parser.add_argument('--epochs', type=int, default=50, help='epochs')
-    parser.add_argument('--input_size', type=int, default=12, help='input dimension')
+    parser.add_argument('--input_size', type=int, default=15, help='input dimension')
     parser.add_argument('--seq_len', type=int, default=24, help='seq len')
     parser.add_argument('--output_size', type=int, default=4, help='output dimension')
     parser.add_argument('--d_model', type=int, default=128, help='d_model')
